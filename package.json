@@ -1,0 +1,30 @@
+{
+  "name": "hugo-lunr",
+  "version": "0.0.1",
+  "description": "create lunr index file for hugo static site search",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgrigg/hugo-lunr.git"
+  },
+  "homepage": "https://github.com/dgrigg/hugo-lunr",
+  "main": "lib/index.js",
+  "bin": {
+    "hugo-lunr": "bin/index.js"
+  },
+  "scripts": {
+    "test": "bin/index.js ",
+    "test-args": "bin/index.js -i \"content/**\" -o public/output.json",
+    "test-api": "bin/api.js"
+  },
+  "author": "Derrick Grigg <derrick@dgrigg.com> (http://dgrigg.com)",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^7.0.0",
+    "gray-matter": "^2.0.2",
+    "remove-markdown": "^0.1.0",
+    "striptags": "^2.1.1",
+    "toml": "^2.3.0"
+  }
+}
+
+

@@ -1,0 +1,1 @@
+var lunr = require('../index.js');
