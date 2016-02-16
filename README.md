@@ -41,9 +41,14 @@ var hugolunr = require('hugo-lunr');
 new hugolunr().index();
 ```
 
+or to set input/output paths
+
 ```javascript
 var hugolunr = require('hugo-lunr');
-new hugolunr().index('content/faq/**', 'public/lunr-faq.json');
+var h = new hugolunr();
+h.setInput('content/faq/**');
+h.setOutput('public/faq.json');
+h.index();
 ```
 
 
