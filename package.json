@@ -1,6 +1,6 @@
 {
   "name": "hugo-lunr",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "create lunr index file for hugo static site search",
   "repository": {
     "type": "git",
