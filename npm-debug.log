@@ -1,0 +1,118 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.8.3
+3 info using node@v5.8.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/gwleclerc/workspace/tools/hugo-lunr',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/gwleclerc/.npm/lunr-hugo/0.1.0/package.tgz not in flight; packing
+9 verbose correctMkdir /home/gwleclerc/.npm correctMkdir not in flight; initializing
+10 info lifecycle lunr-hugo@0.1.0~prepublish: lunr-hugo@0.1.0
+11 silly lifecycle lunr-hugo@0.1.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/home/gwleclerc/.npm/lunr-hugo/0.1.0/package.tgz',
+12 verbose tar pack   '/home/gwleclerc/workspace/tools/hugo-lunr' ]
+13 verbose tarball /home/gwleclerc/.npm/lunr-hugo/0.1.0/package.tgz
+14 verbose folder /home/gwleclerc/workspace/tools/hugo-lunr
+15 verbose addLocalTarball adding from inside cache /home/gwleclerc/.npm/lunr-hugo/0.1.0/package.tgz
+16 verbose correctMkdir /home/gwleclerc/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd lunr-hugo@0.1.0
+18 verbose afterAdd /home/gwleclerc/.npm/lunr-hugo/0.1.0/package/package.json not in flight; writing
+19 verbose correctMkdir /home/gwleclerc/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /home/gwleclerc/.npm/lunr-hugo/0.1.0/package/package.json written
+21 silly publish { name: 'lunr-hugo',
+21 silly publish   version: '0.1.0',
+21 silly publish   description: 'create lunr index file for hugo static site search',
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/gwleclerc/hugo-lunr.git' },
+21 silly publish   homepage: 'https://github.com/gwleclerc/hugo-lunr',
+21 silly publish   main: 'lib/index.js',
+21 silly publish   bin: { 'hugo-lunr': 'bin/index.js' },
+21 silly publish   scripts:
+21 silly publish    { test: 'bin/index.js ',
+21 silly publish      'test-args': 'bin/index.js -i "content/**" -o public/output.json',
+21 silly publish      'test-api': 'bin/api.js' },
+21 silly publish   author:
+21 silly publish    { name: 'Derrick Grigg',
+21 silly publish      email: 'derrick@dgrigg.com',
+21 silly publish      url: 'http://dgrigg.com' },
+21 silly publish   license: 'ISC',
+21 silly publish   dependencies:
+21 silly publish    { glob: '^7.0.0',
+21 silly publish      'gray-matter': '^2.0.2',
+21 silly publish      'remove-markdown': '^0.1.0',
+21 silly publish      striptags: '^2.1.1',
+21 silly publish      toml: '^2.3.0' },
+21 silly publish   readme: '# lunr-hugo\n## Generate lunr.js index files from Hugo static sites\nA simple way to add site search to your static [Hugo](https://gohugo.io/) site using [Lunr.js](http://lunrjs.com/).\n\n## Installation\n\nInstall the lunr-hugo utility via [npm](http://npmjs.org/):\n\n```\n$ npm install lunr-hugo\n```\n\n## Options\nBy default lunr-hugo will read the `content` directory of you and output the lunr index to `public/lunr.json`. If you are using the command line implementation you can pass an input directory `-i` and and output path/file `-o`.\n\n\n## How to use lunr-hugo CLI\nThe easiest way to use lunr-hugo is via npm scripts:\n```\n  "scripts": {\n    "index": "lunr-hugo"\n  },\n```\n\nor to pass arguments for input and output:\n\n```\n  "scripts": {\n    "index": "lunr-hugo -i \\"content/subdir/**\\" -o public/my-index.json"\n  },\n```\n\nWhich can be executed from a terminal prompt\n```\n$ npm run index\n```\n\n## How to use lunr-hugo API\n```javascript\nvar hugolunr = require(\'lunr-hugo\');\nnew hugolunr().index();\n```\n\nor to set input/output paths\n\n```javascript\nvar hugolunr = require(\'lunr-hugo\');\nvar h = new hugolunr();\nh.setInput(\'content/faq/**\');\nh.setOutput(\'public/faq.json\');\nh.index();\n```\n\n# License\nThis project is a fork from https://github.com/dgrigg/hugo-lunr\nIt is under ISC License. Check LICENSE.md for more information. \n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: 'd63d25dc9f11e204d6e75bdffa2f0e96cfdff115',
+21 silly publish   bugs: { url: 'https://github.com/gwleclerc/hugo-lunr/issues' },
+21 silly publish   _id: 'lunr-hugo@0.1.0',
+21 silly publish   _shasum: '5e9728ed36b6b0922536503239e06c87f44143bd',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name lunr-hugo
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry http://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'lunr-hugo',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'lunr-hugo',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri http://registry.npmjs.org/lunr-hugo
+28 verbose publish registryBase http://registry.npmjs.org/
+29 silly publish uploading /home/gwleclerc/.npm/lunr-hugo/0.1.0/package.tgz
+30 verbose request uri http://registry.npmjs.org/lunr-hugo
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 11:15:28
+33 verbose request using bearer token for auth
+34 verbose request id 255053fdd0fdc21a
+35 http request PUT http://registry.npmjs.org/lunr-hugo
+36 http 403 http://registry.npmjs.org/lunr-hugo
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Wed, 06 Jul 2016 09:15:30 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   'x-served-by': 'cache-fra1224-FRA',
+37 verbose headers   'x-cache': 'MISS, MISS from lrennproxy01.manh.fr.sopra',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1467796528.862635,VS0,VE1172',
+37 verbose headers   vary: 'Accept-Encoding',
+37 verbose headers   'x-cache-lookup': 'MISS from lrennproxy01.manh.fr.sopra:8080',
+37 verbose headers   connection: 'keep-alive' }
+38 verbose request invalidating /home/gwleclerc/.npm/registry.npmjs.org/lunr-hugo on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 0.1.0." : lunr-hugo
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+40 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:199:22)
+40 verbose stack     at emitTwo (events.js:100:13)
+40 verbose stack     at Request.emit (events.js:185:7)
+40 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+40 verbose stack     at emitOne (events.js:95:20)
+40 verbose stack     at Request.emit (events.js:182:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:963:12)
+41 verbose statusCode 403
+42 verbose pkgid lunr-hugo
+43 verbose cwd /home/gwleclerc/workspace/tools/hugo-lunr
+44 error Linux 3.13.0-91-generic
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v5.8.0
+47 error npm  v3.8.3
+48 error code E403
+49 error "You cannot publish over the previously published version 0.1.0." : lunr-hugo
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
