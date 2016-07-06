@@ -1,6 +1,6 @@
 {
   "name": "lunr-hugo",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "create lunr index file for hugo static site search",
   "repository": {
     "type": "git",
@@ -9,7 +9,7 @@
   "homepage": "https://github.com/gwleclerc/hugo-lunr",
   "main": "lib/index.js",
   "bin": {
-    "hugo-lunr": "bin/index.js"
+    "lunr-hugo": "bin/index.js"
   },
   "scripts": {
     "test": "bin/index.js ",
