@@ -11,8 +11,15 @@ $ npm install hugo-lunr
 ```
 
 ## Options
-By default hugo-lunr will read the `content` directory of you and output the lunr index to `public/lunr.json`. If you are using the command line implementation you can pass an input directory `-i` and and output path/file `-o`.
+By default hugo-lunr will read the `content` directory of you and output the lunr index to `public/lunr.json`. If you are using the command line implementation you can pass an input directory `-i` and an output path/file `-o`.
 
+To exclude folders within your input directory, you can pass comma-separated [glob patterns](https://www.npmjs.com/package/glob#glob-primer) with the `--excludes` parameter, e.g.
+
+```
+hugo-lunr -i \"content/subdir/**\" -o public/my-index.json --excludes \"content/images/**\"
+```
+
+Note that the API version of this flag (`setExcludes()`) can accept a comma-separated string or an array of glob patterns.
 
 ## How to use hugo-lunr CLI
 The easiest way to use hugo-lunr is via npm scripts:
@@ -48,7 +55,6 @@ var hugolunr = require('hugo-lunr');
 var h = new hugolunr();
 h.setInput('content/faq/**');
 h.setOutput('public/faq.json');
+h.setExcludes(['content/faq/images/**', 'content/faq/subdir/assets/**']);
 h.index();
 ```
-
-
