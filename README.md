@@ -13,6 +13,8 @@ $ npm install hugo-lunr
 ## Options
 By default hugo-lunr will read the `content` directory of you and output the lunr index to `public/lunr.json`. If you are using the command line implementation you can pass an input directory `-i` and an output path/file `-o`.
 
+### Exclude folders
+
 To exclude folders within your input directory, you can pass comma-separated [glob patterns](https://www.npmjs.com/package/glob#glob-primer) with the `--excludes` parameter, e.g.
 
 ```
@@ -21,7 +23,21 @@ hugo-lunr -i \"content/subdir/**\" -o public/my-index.json --excludes \"content/
 
 Note that the API version of this flag (`setExcludes()`) can accept a comma-separated string or an array of glob patterns.
 
+### Content file options
+
+Using the `--fileopts` CLI flag or `setFileOpts()` API method, you can specify these options when reading content files:
+
+| Key | Default | Desc |
+| --- | --- | --- |
+| `matter` | `{delims: '+++', lang:'toml'}` | [Options](https://www.npmjs.com/package/gray-matter#read) for reading front matter |
+| `taxonomies` | `['tags']` | Array of taxonomies to include in index |
+| `indexDrafts` | `false` | Whether to include draft posts when building search index. Note that **future-dated posts will be indexed** (PRs welcome...) |
+| `params` | `[]` | Array of any other parameters to include in index, e.g. `date` |
+
+You can provide the path to a JSON file using CLI flag or API, or just pass an object directly when calling the API method.
+
 ## How to use hugo-lunr CLI
+
 The easiest way to use hugo-lunr is via npm scripts:
 ```
   "scripts": {
@@ -56,5 +72,6 @@ var h = new hugolunr();
 h.setInput('content/faq/**');
 h.setOutput('public/faq.json');
 h.setExcludes(['content/faq/images/**', 'content/faq/subdir/assets/**']);
+h.setFileOpts({ taxonomies: ['tags', 'categories'] });
 h.index();
 ```
