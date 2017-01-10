@@ -33,6 +33,7 @@ Using the `--fileopts` CLI flag or `setFileOpts()` API method, you can specify t
 | `taxonomies` | `['tags']` | Array of taxonomies to include in index |
 | `indexDrafts` | `false` | Whether to include draft posts when building search index. Note that **future-dated posts will be indexed** (PRs welcome...) |
 | `params` | `[]` | Array of any other parameters to include in index, e.g. `date` |
+| `callback` | null | Callback function to transform the output of reading each file. Can be used only with API |
 
 You can provide the path to a JSON file using CLI flag or API, or just pass an object directly when calling the API method.
 
