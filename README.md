@@ -11,7 +11,7 @@ $ npm install hugo-lunr
 ```
 
 ## Options
-By default hugo-lunr will read the `content` directory of you and output the lunr index to `public/lunr.json`. If you are using the command line implementation you can pass an input directory `-i` and and output path/file `-o`.
+By default hugo-lunr will read the `content` directory of you and output the lunr index to `public/lunr.json`. If you are using the command line implementation you can pass an input directory `-i` and and output path/file `-o`. Optionally, you can exclude future ports not marked as draft with the option `-f false`.
 
 
 ## How to use hugo-lunr CLI
@@ -48,6 +48,7 @@ var hugolunr = require('hugo-lunr');
 var h = new hugolunr();
 h.setInput('content/faq/**');
 h.setOutput('public/faq.json');
+h.setIncludeFuture(false); // Optional. Default true.
 h.index();
 ```
 
